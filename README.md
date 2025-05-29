@@ -19,10 +19,6 @@ Dies ist eine ToDo-Listen-Webanwendung mit Drag & Drop, Farbauswahl und Datenper
     - Einen MySQL-Benutzer `user` mit Passwort `t0{d0-l1]5t` anlegt und diesem die notwendigen CRUD-Rechte auf die Datenbank `todo` erteilt  
 5. Danach ist die Anwendung einsatzbereit und speichert alle Aufgaben direkt in der Datenbank  
 
-Eine Tabelle tasks mit Spalten für Aufgabenname, Status und Farbe anlegt
-
-Einen MySQL-Benutzer user mit Passwort t0{d0-l1]5t anlegt und diesem die notwendigen CRUD-Rechte auf die Datenbank todo erteilt
-
 ## 📁 Projektstruktur
 
 - `index.html` – Hauptseite mit JavaScript-Logik
