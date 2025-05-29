@@ -24,7 +24,6 @@ Dies ist eine ToDo-Listen-Webanwendung mit Drag & Drop, Farbauswahl und Datenper
 - `index.html` – Hauptseite mit JavaScript-Logik
 - `php/` – Backend-Logik in PHP (`createTask.php`, `deleteTask.php` etc.)
 - `style.css` – Styling
-- `README.md` – Diese Anleitung
 
 ## 🧠 Features
 
