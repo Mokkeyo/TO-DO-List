@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000;
+}
+
+h2, h3 {
+    color: white;
+    text-align: center;
+}
+
+.task-name {
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+    display: block;
+    max-width: 100%;
+}
+
+#task-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    width: 80%;
+}
+
+.column {
+    width: 30%;
+    min-height: 300px;
+    padding: 10px;
+    background-color: #21007c;
+    border: 2px dashed gray;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.task {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: grab;
+    background-color: #7f8c8d; /* Optional background color */
+}
+
+.edit-task-btn {
+    visibility: visible; /* Make it always visible */
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-90%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 1; /* Always visible on mobile */
+    padding: 0;
+}
+
+#taskText {
+    color: #000000;
+}
+
+.edit-task-btn:hover {
+    border: 1px solid black;
+}
+
+.task input[type="color"] {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.task:active {
+    cursor: grabbing;
+}
+
+.task:hover {
+    background-color: #5a005a;
+}
+
+#deleteBtn {
+    background-color: red;
+    color: black;
+}
+
+#deleteBtn:hover {
+    background-color: rgb(102, 0, 0);
+}
+
+#cancelBtn {
+    background-color: darkgray;
+}
+
+#cancelBtn:hover {
+    background-color: gray;
+}
+
+button, #addBtn:hover {
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#saveBtn, #addBtn {
+    background-color: #2ecc71;
+}
+
+#saveBtn:hover, #addBtn:hover {
+    background-color: #27ae60;
+}
+
+.custom-context-menu li {
+    list-style: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#taskModal, .custom-context-menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgb(121, 121, 121);
+    border: 4px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+}
+
+#taskModal input, #taskModal select {
+    margin-bottom: 10px;
+}
+
+#taskModal button {
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.colorpicker {
+    padding: 0;
+    width: 40%;
+    cursor: pointer;
+}
+
+/* Media Queries for Mobile View */
+@media (max-width: 768px) {
+    .task {
+        cursor: grab; /* Make tasks draggable on mobile */
+    }
+
+    .task:hover {
+        background-color: #5a005a;
+    }
+
+    /* Make the edit button always visible */
+    .edit-task-btn {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* Ensure tasks are centered and easily touchable on smaller screens */
+    #task-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .column {
+        width: 100%; /* Full width for columns on mobile */
+        min-height: 200px;
+    }
+}
